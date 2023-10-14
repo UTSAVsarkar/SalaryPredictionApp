@@ -123,7 +123,7 @@ def show_predict_page():
     ok = st.button("Calculate Salary")
 
     if ok:
-        if(int(age)<22):
+        if(age == '' or int(age) < 22):
             st.error('Age not in range (please give value more than 22)', icon="🚨")
         else:
             X = np.array([[age, sex, background, position, expericence, ]])
